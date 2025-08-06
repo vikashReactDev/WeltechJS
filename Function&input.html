@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <label for="first">First Input:</label>
+    <input type="number" id="first"  onchange="firstInput(this.value)">
+    <br>
+    <label for="second">Second Input:</label>
+    <input type="number" id="second"  onchange="secondInput(this.value)">
+    <br>
+    <button onclick="add()">Add</button>
+      
+    <script>
+        let firstvalue ;
+        let secondvalue ;
+
+        function firstInput(value)
+        {
+            firstvalue = Number(value)
+            console.log("First Input Value:"+ firstvalue);
+
+        }
+        function secondInput(value)
+        {
+            secondvalue = Number(value)
+            console.log("Second Input Value:"+ secondvalue);
+        }
+        function add()
+        {
+            let result = firstvalue + secondvalue;
+            alert("Addition Result:"+ result);
+        }
+        
+
+    </script>
+</body>
+</html>

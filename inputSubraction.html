@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="first">First Input:</label>
+    <input type="number" id="first" onchange="firstInput(this.value)" />
+    <br />
+    <label for="second">Second Input:</label>
+    <input type="number" id="second" onchange="secondInput(this.value)" />
+    <br />
+    <button onclick="add()">Add</button>
+
+    <script>
+      let firstvalue =0;
+      let secondvalue =0;
+
+      function firstInput(value) {
+        firstvalue = Number(value);
+        console.log("First Input Value:" + firstvalue);
+      }
+      function secondInput(value) {
+        secondvalue = Number(value);
+        console.log("Second Input Value:" + secondvalue);
+      }
+      function add() {
+        let sum = firstvalue + secondvalue;
+        let Sub = firstvalue - secondvalue;
+        let Mul = firstvalue * secondvalue;
+        let Div = secondvalue !== 0 ? firstvalue / secondvalue : 
+          alert("Division by zero is not allowed");
+        let Mod = secondvalue !== 0 ? firstvalue % secondvalue : 
+          alert("Modulus by zero is not allowed");
+             
+        alert(
+          "Addition Result: " + sum + "\n" +
+          "Subtraction Result: " + Sub + "\n" +
+          "Multiplication Result: " + Mul+ "\n" +
+          "Division Result: " + Div + "\n" +
+          "Modulus Result: " + Mod
+        );
+      }
+    </script>
+  </body>
+</html>
